@@ -72,39 +72,48 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminaccountForm.cs">
+    <Compile Include="Forms\AdminaccountForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminaccountForm.Designer.cs">
+    <Compile Include="Forms\AdminaccountForm.Designer.cs">
       <DependentUpon>AdminaccountForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomButton1.cs">
+    <Compile Include="Controls\CustomButton1.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CustomComboBox.cs">
+    <Compile Include="Controls\CustomComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CustomLabel1.cs">
+    <Compile Include="Controls\CustomLabel1.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="firstSetupModel.cs" />
-    <Compile Include="RegisterstoreForm.cs">
+    <Compile Include="Forms\CreateAdminPassForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegisterstoreForm.Designer.cs">
+    <Compile Include="Forms\CreateAdminPassForm.Designer.cs">
+      <DependentUpon>CreateAdminPassForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\firstSetupModel.cs" />
+    <Compile Include="Forms\RegisterstoreForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RegisterstoreForm.Designer.cs">
       <DependentUpon>RegisterstoreForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLiteDataAccess.cs" />
-    <Compile Include="Themes.cs" />
-    <Compile Include="TopPanel.cs" />
+    <Compile Include="Theme\Themes.cs" />
+    <Compile Include="Theme\TopPanel.cs" />
     <None Include="Resources\darkmode_icon_dark-01.png" />
     <None Include="Resources\darkmode_icon-01.png" />
-    <EmbeddedResource Include="AdminaccountForm.resx">
+    <EmbeddedResource Include="Forms\AdminaccountForm.resx">
       <DependentUpon>AdminaccountForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RegisterstoreForm.resx">
+    <EmbeddedResource Include="Forms\CreateAdminPassForm.resx">
+      <DependentUpon>CreateAdminPassForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RegisterstoreForm.resx">
       <DependentUpon>RegisterstoreForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -148,6 +157,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\minimize_icon_black-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.113.1\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.113.1\build\net46\System.Data.SQLite.Core.targets')" />

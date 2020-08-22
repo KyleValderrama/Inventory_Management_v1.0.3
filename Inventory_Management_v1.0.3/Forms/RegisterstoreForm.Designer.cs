@@ -46,10 +46,10 @@
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.WinformTtb = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.themeToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.switchBtn = new System.Windows.Forms.Button();
             this.ExitBtn = new System.Windows.Forms.Button();
             this.MinimizeBtn = new System.Windows.Forms.Button();
+            this.themeToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.nextBtn = new Inventory_Management_v1._0._3.CustomButton1();
             this.customLabel17 = new Inventory_Management_v1._0._3.CustomLabel1();
             this.customLabel16 = new Inventory_Management_v1._0._3.CustomLabel1();
@@ -57,6 +57,7 @@
             this.customLabel14 = new Inventory_Management_v1._0._3.CustomLabel1();
             this.customLabel13 = new Inventory_Management_v1._0._3.CustomLabel1();
             this.customLabel12 = new Inventory_Management_v1._0._3.CustomLabel1();
+            this.fade = new System.Windows.Forms.Timer(this.components);
             this.WinformBorder.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -300,11 +301,6 @@
             this.bunifuCustomLabel1.TabIndex = 3;
             this.bunifuCustomLabel1.Text = "Inventory Management System";
             // 
-            // themeToolTip
-            // 
-            this.themeToolTip.ToolTipTitle = "Switch Theme";
-            this.themeToolTip.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
-            // 
             // switchBtn
             // 
             this.switchBtn.FlatAppearance.BorderSize = 0;
@@ -343,6 +339,11 @@
             this.MinimizeBtn.TabIndex = 0;
             this.MinimizeBtn.TabStop = false;
             this.MinimizeBtn.UseVisualStyleBackColor = true;
+            // 
+            // themeToolTip
+            // 
+            this.themeToolTip.ToolTipTitle = "Switch Theme";
+            this.themeToolTip.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
             // 
             // nextBtn
             // 
@@ -420,6 +421,11 @@
             this.customLabel12.TabIndex = 4;
             this.customLabel12.Text = "First-time Setup";
             // 
+            // fade
+            // 
+            this.fade.Interval = 30;
+            this.fade.Tick += new System.EventHandler(this.fadeIn_Tick);
+            // 
             // RegisterstoreForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -480,6 +486,7 @@
         private CustomLabel1 customLabel14;
         private CustomButton1 nextBtn;
         private System.Windows.Forms.ToolTip themeToolTip;
+        private System.Windows.Forms.Timer fade;
     }
 }
 
