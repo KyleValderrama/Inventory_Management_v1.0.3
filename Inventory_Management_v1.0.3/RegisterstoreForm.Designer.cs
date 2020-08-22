@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.WinformBorder = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -45,7 +46,8 @@
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.WinformTtb = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.themeToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.switchBtn = new System.Windows.Forms.Button();
             this.ExitBtn = new System.Windows.Forms.Button();
             this.MinimizeBtn = new System.Windows.Forms.Button();
             this.nextBtn = new Inventory_Management_v1._0._3.CustomButton1();
@@ -273,7 +275,7 @@
             // 
             this.WinformTtb.BackColor = System.Drawing.Color.Transparent;
             this.WinformTtb.Controls.Add(this.bunifuCustomLabel1);
-            this.WinformTtb.Controls.Add(this.button1);
+            this.WinformTtb.Controls.Add(this.switchBtn);
             this.WinformTtb.Controls.Add(this.ExitBtn);
             this.WinformTtb.Controls.Add(this.MinimizeBtn);
             this.WinformTtb.Dock = System.Windows.Forms.DockStyle.Top;
@@ -298,17 +300,25 @@
             this.bunifuCustomLabel1.TabIndex = 3;
             this.bunifuCustomLabel1.Text = "Inventory Management System";
             // 
-            // button1
+            // themeToolTip
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(606, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 38);
-            this.button1.TabIndex = 1;
-            this.button1.TabStop = false;
-            this.button1.Text = "Test";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.themeToolTip.ToolTipTitle = "Switch Theme";
+            this.themeToolTip.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
+            // 
+            // switchBtn
+            // 
+            this.switchBtn.FlatAppearance.BorderSize = 0;
+            this.switchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.switchBtn.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.switchBtn.Image = global::Inventory_Management_v1._0._3.Properties.Resources.darkmode_icon_01;
+            this.switchBtn.Location = new System.Drawing.Point(621, 0);
+            this.switchBtn.Name = "switchBtn";
+            this.switchBtn.Size = new System.Drawing.Size(43, 38);
+            this.switchBtn.TabIndex = 1;
+            this.switchBtn.TabStop = false;
+            this.themeToolTip.SetToolTip(this.switchBtn, "Switch To Dark Mode");
+            this.switchBtn.UseVisualStyleBackColor = true;
+            this.switchBtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // ExitBtn
             // 
@@ -446,7 +456,7 @@
         private System.Windows.Forms.Panel WinformTtb;
         private System.Windows.Forms.Button MinimizeBtn;
         private System.Windows.Forms.Button ExitBtn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button switchBtn;
         private System.Windows.Forms.Panel WinformTtl;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
@@ -469,6 +479,7 @@
         private CustomLabel1 customLabel15;
         private CustomLabel1 customLabel14;
         private CustomButton1 nextBtn;
+        private System.Windows.Forms.ToolTip themeToolTip;
     }
 }
 

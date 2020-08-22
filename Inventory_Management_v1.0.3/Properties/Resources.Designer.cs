@@ -83,6 +83,26 @@ namespace Inventory_Management_v1._0._3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap darkmode_icon_01 {
+            get {
+                object obj = ResourceManager.GetObject("darkmode_icon-01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap darkmode_icon_dark_01 {
+            get {
+                object obj = ResourceManager.GetObject("darkmode_icon_dark-01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_close_black_01 {
             get {
                 object obj = ResourceManager.GetObject("icon_close_black-01", resourceCulture);

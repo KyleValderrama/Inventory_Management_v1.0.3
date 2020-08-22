@@ -6,8 +6,16 @@ using System.Threading.Tasks;
 
 namespace Inventory_Management_v1._0._3
 {
-    class firstSetupModel
+    public class firstSetupModel
     {
+        public string storeName { get; set; }
+        public string dbPassword { get; set; }
+        public string dbName { get; set; }
+
+        public string GetStoreName()
+        {
+            return storeName;
+        }
 
     }
 }

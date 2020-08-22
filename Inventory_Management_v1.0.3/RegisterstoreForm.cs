@@ -18,9 +18,13 @@ namespace Inventory_Management_v1._0._3
         private bool passwordaccept = false;
 
         //==============strings
-        public static string storename = "";
-        public static string password = "";
-        public static string storedbname = "";
+        private void getData()
+        {
+            firstSetupModel fsm = new firstSetupModel();
+            fsm.dbName = storenameTxt.Text.Replace(" ", String.Empty).ToLower() + "db";
+            fsm.dbPassword = passwordTxt.Text;
+            fsm.storeName = storenameTxt.Text;
+        }
 
         private void validate()
         {
@@ -41,7 +45,7 @@ namespace Inventory_Management_v1._0._3
         public RegisterstoreForm()
         {
             InitializeComponent();
-            Themes.UpdateThemeStyle(this, MinimizeBtn, ExitBtn);
+            Themes.UpdateThemeStyle(this, MinimizeBtn, ExitBtn, switchBtn, themeToolTip);
             storedbnameLbl.Text = "";
             storenameTxt.Text = "";
             passwordvalidLbl.Text = "";
@@ -50,11 +54,11 @@ namespace Inventory_Management_v1._0._3
             reenterTxt.Text = "";
             this.ActiveControl = storenameTxt;
             nextBtn.Enabled = false;
-
+            this.AcceptButton = nextBtn;
         }
         private void RegisterstoreForm_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -64,7 +68,7 @@ namespace Inventory_Management_v1._0._3
             else if (Themes.ThemeStyle == "Light")
                 Themes.ThemeStyle = "Dark";
 
-            Themes.UpdateThemeStyle(this, MinimizeBtn, ExitBtn);
+            Themes.UpdateThemeStyle(this, MinimizeBtn, ExitBtn, switchBtn, themeToolTip);
         }
 
         private void WinformTtb_MouseDown(object sender, MouseEventArgs e)
@@ -227,8 +231,14 @@ namespace Inventory_Management_v1._0._3
         private void nextBtn_Click(object sender, EventArgs e)
         {
             AdminaccountForm next = new AdminaccountForm();
+            getData();
             next.Show();
             this.Hide();
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
         }
     }   
 }
