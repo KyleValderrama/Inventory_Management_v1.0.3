@@ -69,7 +69,7 @@
             this.lbl = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.WinformTtb = new System.Windows.Forms.Panel();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.backBtn = new Inventory_Management_v1._0._3.Controls.CustomButtonBack();
             this.switchBtn = new System.Windows.Forms.Button();
             this.ExitBtn = new System.Windows.Forms.Button();
             this.MinimizeBtn = new System.Windows.Forms.Button();
@@ -631,7 +631,7 @@
             // WinformTtb
             // 
             this.WinformTtb.BackColor = System.Drawing.Color.Transparent;
-            this.WinformTtb.Controls.Add(this.bunifuCustomLabel1);
+            this.WinformTtb.Controls.Add(this.backBtn);
             this.WinformTtb.Controls.Add(this.switchBtn);
             this.WinformTtb.Controls.Add(this.ExitBtn);
             this.WinformTtb.Controls.Add(this.MinimizeBtn);
@@ -644,18 +644,17 @@
             this.WinformTtb.MouseMove += new System.Windows.Forms.MouseEventHandler(this.WinformTtb_MouseMove);
             this.WinformTtb.MouseUp += new System.Windows.Forms.MouseEventHandler(this.WinformTtb_MouseUp);
             // 
-            // bunifuCustomLabel1
+            // backBtn
             // 
-            this.bunifuCustomLabel1.AllowDrop = true;
-            this.bunifuCustomLabel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(30, 11);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(187, 17);
-            this.bunifuCustomLabel1.TabIndex = 3;
-            this.bunifuCustomLabel1.Text = "Inventory Management System";
+            this.backBtn.FlatAppearance.BorderSize = 0;
+            this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backBtn.Image = global::Inventory_Management_v1._0._3.Properties.Resources.icon_back_black_01;
+            this.backBtn.Location = new System.Drawing.Point(0, 0);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(41, 38);
+            this.backBtn.TabIndex = 6;
+            this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
             // switchBtn
             // 
@@ -735,7 +734,6 @@
             this.WinformTtl.ResumeLayout(false);
             this.WinformTtl.PerformLayout();
             this.WinformTtb.ResumeLayout(false);
-            this.WinformTtb.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -757,7 +755,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel lbl;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private System.Windows.Forms.Panel WinformTtb;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private System.Windows.Forms.Button switchBtn;
         private System.Windows.Forms.Button ExitBtn;
         private System.Windows.Forms.Button MinimizeBtn;
@@ -788,5 +785,6 @@
         private System.Windows.Forms.TextBox emailTxt;
         private System.Windows.Forms.Label emailvalidLbl;
         private System.Windows.Forms.Timer fade;
+        private Controls.CustomButtonBack backBtn;
     }
 }

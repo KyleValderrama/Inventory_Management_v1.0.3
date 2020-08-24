@@ -20,7 +20,7 @@ namespace Inventory_Management_v1._0._3
             Application.EnableVisualStyles();
             //DefaultFont = new System.Drawing.Font("Arial", 12);
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CreateAdminPassForm());
+            Application.Run(new FirstSetupSummaryForm());
         }
     }
 }

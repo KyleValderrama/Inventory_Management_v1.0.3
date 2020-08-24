@@ -31,9 +31,14 @@
             this.components = new System.ComponentModel.Container();
             this.WinformBorder = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.nextBtn = new Inventory_Management_v1._0._3.CustomButton1();
             this.panel1 = new System.Windows.Forms.Panel();
             this.reenterLbl = new System.Windows.Forms.Label();
             this.passwordvalidLbl = new System.Windows.Forms.Label();
+            this.customLabel17 = new Inventory_Management_v1._0._3.CustomLabel1();
+            this.customLabel16 = new Inventory_Management_v1._0._3.CustomLabel1();
+            this.customLabel15 = new Inventory_Management_v1._0._3.CustomLabel1();
+            this.customLabel14 = new Inventory_Management_v1._0._3.CustomLabel1();
             this.storedbnameLbl = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
@@ -43,20 +48,14 @@
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.storenameTxt = new System.Windows.Forms.TextBox();
             this.WinformTtl = new System.Windows.Forms.Panel();
+            this.customLabel13 = new Inventory_Management_v1._0._3.CustomLabel1();
+            this.customLabel12 = new Inventory_Management_v1._0._3.CustomLabel1();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.WinformTtb = new System.Windows.Forms.Panel();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.switchBtn = new System.Windows.Forms.Button();
             this.ExitBtn = new System.Windows.Forms.Button();
             this.MinimizeBtn = new System.Windows.Forms.Button();
             this.themeToolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.nextBtn = new Inventory_Management_v1._0._3.CustomButton1();
-            this.customLabel17 = new Inventory_Management_v1._0._3.CustomLabel1();
-            this.customLabel16 = new Inventory_Management_v1._0._3.CustomLabel1();
-            this.customLabel15 = new Inventory_Management_v1._0._3.CustomLabel1();
-            this.customLabel14 = new Inventory_Management_v1._0._3.CustomLabel1();
-            this.customLabel13 = new Inventory_Management_v1._0._3.CustomLabel1();
-            this.customLabel12 = new Inventory_Management_v1._0._3.CustomLabel1();
             this.fade = new System.Windows.Forms.Timer(this.components);
             this.WinformBorder.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -90,6 +89,22 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(798, 100);
             this.panel2.TabIndex = 4;
+            // 
+            // nextBtn
+            // 
+            this.nextBtn.BackColor = System.Drawing.Color.DodgerBlue;
+            this.nextBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.nextBtn.FlatAppearance.BorderSize = 0;
+            this.nextBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nextBtn.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nextBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.nextBtn.Location = new System.Drawing.Point(636, 31);
+            this.nextBtn.Name = "nextBtn";
+            this.nextBtn.Size = new System.Drawing.Size(129, 38);
+            this.nextBtn.TabIndex = 0;
+            this.nextBtn.Text = "Next";
+            this.nextBtn.UseVisualStyleBackColor = false;
+            this.nextBtn.Click += new System.EventHandler(this.nextBtn_Click);
             // 
             // panel1
             // 
@@ -129,6 +144,46 @@
             this.passwordvalidLbl.Size = new System.Drawing.Size(107, 20);
             this.passwordvalidLbl.TabIndex = 5;
             this.passwordvalidLbl.Text = "Password Valid";
+            // 
+            // customLabel17
+            // 
+            this.customLabel17.AutoSize = true;
+            this.customLabel17.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customLabel17.Location = new System.Drawing.Point(354, 58);
+            this.customLabel17.Name = "customLabel17";
+            this.customLabel17.Size = new System.Drawing.Size(123, 20);
+            this.customLabel17.TabIndex = 4;
+            this.customLabel17.Text = "Database Name :";
+            // 
+            // customLabel16
+            // 
+            this.customLabel16.AutoSize = true;
+            this.customLabel16.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customLabel16.Location = new System.Drawing.Point(26, 181);
+            this.customLabel16.Name = "customLabel16";
+            this.customLabel16.Size = new System.Drawing.Size(137, 20);
+            this.customLabel16.TabIndex = 4;
+            this.customLabel16.Text = "Re-Enter Password*";
+            // 
+            // customLabel15
+            // 
+            this.customLabel15.AutoSize = true;
+            this.customLabel15.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customLabel15.Location = new System.Drawing.Point(26, 103);
+            this.customLabel15.Name = "customLabel15";
+            this.customLabel15.Size = new System.Drawing.Size(143, 20);
+            this.customLabel15.TabIndex = 4;
+            this.customLabel15.Text = "Database Password*";
+            // 
+            // customLabel14
+            // 
+            this.customLabel14.AutoSize = true;
+            this.customLabel14.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customLabel14.Location = new System.Drawing.Point(26, 26);
+            this.customLabel14.Name = "customLabel14";
+            this.customLabel14.Size = new System.Drawing.Size(94, 20);
+            this.customLabel14.TabIndex = 4;
+            this.customLabel14.Text = "Store Name*";
             // 
             // storedbnameLbl
             // 
@@ -261,6 +316,26 @@
             this.WinformTtl.Size = new System.Drawing.Size(798, 129);
             this.WinformTtl.TabIndex = 2;
             // 
+            // customLabel13
+            // 
+            this.customLabel13.AutoSize = true;
+            this.customLabel13.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customLabel13.Location = new System.Drawing.Point(23, 54);
+            this.customLabel13.Name = "customLabel13";
+            this.customLabel13.Size = new System.Drawing.Size(216, 32);
+            this.customLabel13.TabIndex = 4;
+            this.customLabel13.Text = "Register Your Store";
+            // 
+            // customLabel12
+            // 
+            this.customLabel12.AutoSize = true;
+            this.customLabel12.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customLabel12.Location = new System.Drawing.Point(20, 6);
+            this.customLabel12.Name = "customLabel12";
+            this.customLabel12.Size = new System.Drawing.Size(284, 50);
+            this.customLabel12.TabIndex = 4;
+            this.customLabel12.Text = "First-time Setup";
+            // 
             // bunifuCustomLabel2
             // 
             this.bunifuCustomLabel2.AutoSize = true;
@@ -275,7 +350,6 @@
             // WinformTtb
             // 
             this.WinformTtb.BackColor = System.Drawing.Color.Transparent;
-            this.WinformTtb.Controls.Add(this.bunifuCustomLabel1);
             this.WinformTtb.Controls.Add(this.switchBtn);
             this.WinformTtb.Controls.Add(this.ExitBtn);
             this.WinformTtb.Controls.Add(this.MinimizeBtn);
@@ -287,19 +361,6 @@
             this.WinformTtb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.WinformTtb_MouseDown);
             this.WinformTtb.MouseMove += new System.Windows.Forms.MouseEventHandler(this.WinformTtb_MouseMove);
             this.WinformTtb.MouseUp += new System.Windows.Forms.MouseEventHandler(this.WinformTtb_MouseUp);
-            // 
-            // bunifuCustomLabel1
-            // 
-            this.bunifuCustomLabel1.AllowDrop = true;
-            this.bunifuCustomLabel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(30, 11);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(187, 17);
-            this.bunifuCustomLabel1.TabIndex = 3;
-            this.bunifuCustomLabel1.Text = "Inventory Management System";
             // 
             // switchBtn
             // 
@@ -345,82 +406,6 @@
             this.themeToolTip.ToolTipTitle = "Switch Theme";
             this.themeToolTip.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
             // 
-            // nextBtn
-            // 
-            this.nextBtn.BackColor = System.Drawing.Color.DodgerBlue;
-            this.nextBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.nextBtn.FlatAppearance.BorderSize = 0;
-            this.nextBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.nextBtn.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nextBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.nextBtn.Location = new System.Drawing.Point(636, 31);
-            this.nextBtn.Name = "nextBtn";
-            this.nextBtn.Size = new System.Drawing.Size(129, 38);
-            this.nextBtn.TabIndex = 0;
-            this.nextBtn.Text = "Next";
-            this.nextBtn.UseVisualStyleBackColor = false;
-            this.nextBtn.Click += new System.EventHandler(this.nextBtn_Click);
-            // 
-            // customLabel17
-            // 
-            this.customLabel17.AutoSize = true;
-            this.customLabel17.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customLabel17.Location = new System.Drawing.Point(354, 58);
-            this.customLabel17.Name = "customLabel17";
-            this.customLabel17.Size = new System.Drawing.Size(123, 20);
-            this.customLabel17.TabIndex = 4;
-            this.customLabel17.Text = "Database Name :";
-            // 
-            // customLabel16
-            // 
-            this.customLabel16.AutoSize = true;
-            this.customLabel16.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customLabel16.Location = new System.Drawing.Point(26, 181);
-            this.customLabel16.Name = "customLabel16";
-            this.customLabel16.Size = new System.Drawing.Size(137, 20);
-            this.customLabel16.TabIndex = 4;
-            this.customLabel16.Text = "Re-Enter Password*";
-            // 
-            // customLabel15
-            // 
-            this.customLabel15.AutoSize = true;
-            this.customLabel15.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customLabel15.Location = new System.Drawing.Point(26, 103);
-            this.customLabel15.Name = "customLabel15";
-            this.customLabel15.Size = new System.Drawing.Size(143, 20);
-            this.customLabel15.TabIndex = 4;
-            this.customLabel15.Text = "Database Password*";
-            // 
-            // customLabel14
-            // 
-            this.customLabel14.AutoSize = true;
-            this.customLabel14.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customLabel14.Location = new System.Drawing.Point(26, 26);
-            this.customLabel14.Name = "customLabel14";
-            this.customLabel14.Size = new System.Drawing.Size(94, 20);
-            this.customLabel14.TabIndex = 4;
-            this.customLabel14.Text = "Store Name*";
-            // 
-            // customLabel13
-            // 
-            this.customLabel13.AutoSize = true;
-            this.customLabel13.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customLabel13.Location = new System.Drawing.Point(23, 54);
-            this.customLabel13.Name = "customLabel13";
-            this.customLabel13.Size = new System.Drawing.Size(216, 32);
-            this.customLabel13.TabIndex = 4;
-            this.customLabel13.Text = "Register Your Store";
-            // 
-            // customLabel12
-            // 
-            this.customLabel12.AutoSize = true;
-            this.customLabel12.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customLabel12.Location = new System.Drawing.Point(20, 6);
-            this.customLabel12.Name = "customLabel12";
-            this.customLabel12.Size = new System.Drawing.Size(284, 50);
-            this.customLabel12.TabIndex = 4;
-            this.customLabel12.Text = "First-time Setup";
-            // 
             // fade
             // 
             this.fade.Interval = 30;
@@ -451,7 +436,6 @@
             this.WinformTtl.ResumeLayout(false);
             this.WinformTtl.PerformLayout();
             this.WinformTtb.ResumeLayout(false);
-            this.WinformTtb.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -464,7 +448,6 @@
         private System.Windows.Forms.Button ExitBtn;
         private System.Windows.Forms.Button switchBtn;
         private System.Windows.Forms.Panel WinformTtl;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private System.Windows.Forms.Panel panel1;
         private MetroFramework.Controls.MetroPanel metroPanel1;

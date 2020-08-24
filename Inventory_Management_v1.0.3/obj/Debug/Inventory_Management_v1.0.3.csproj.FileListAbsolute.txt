@@ -23,3 +23,4 @@ C:\Users\Kyle\source\repos\Inventory_Management_v1.0.3\Inventory_Management_v1.0
 C:\Users\Kyle\source\repos\Inventory_Management_v1.0.3\Inventory_Management_v1.0.3\bin\Debug\System.Data.SQLite.dll.config
 C:\Users\Kyle\source\repos\Inventory_Management_v1.0.3\Inventory_Management_v1.0.3\obj\Debug\Inventory_Management_v1._0._3.AdminaccountForm.resources
 C:\Users\Kyle\source\repos\Inventory_Management_v1.0.3\Inventory_Management_v1.0.3\obj\Debug\Inventory_Management_v1._0._3.Forms.CreateAdminPassForm.resources
+C:\Users\Kyle\source\repos\Inventory_Management_v1.0.3\Inventory_Management_v1.0.3\obj\Debug\Inventory_Management_v1._0._3.Forms.FirstSetupSummaryForm.resources

@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.Security.Cryptography.X509Certificates;
 using Inventory_Management_v1._0._3.Forms;
+using System.Data.Common;
 
 namespace Inventory_Management_v1._0._3
 {
@@ -21,7 +22,11 @@ namespace Inventory_Management_v1._0._3
         private bool firstnamevalid = false;
         private bool lastnamevalid = false;
         private bool emailvalid = false;
-        private string dbpassword;
+        private string dbpassword = "";
+        private string dbname = "";
+        private bool flag = true;
+        private bool next;
+        private bool back;
 
         //Themes & TitleBar
         private void switchTheme()
@@ -50,28 +55,32 @@ namespace Inventory_Management_v1._0._3
         }
 
         //Methods
-        
         private firstSetupModel setData()
         {
             return new firstSetupModel
             {
                 //Store Db Information
                 storeName = storenameLbl.Text,
-                dbName = storenameLbl.Text.Replace(" ", $"{ (String.Empty).ToLower() } db"),
+                dbName = dbname,
                 dbPassword = dbpassword,
 
                 //Admin Information
                 firstName = firstnameTxt.Text,
-                lasttName = lastnameTxt.Text,
+                lastName = lastnameTxt.Text,
                 middleName = middlenameTxt.Text,
                 birthDate = new DateTime((int)yearCmb.SelectedItem, monthCmb.SelectedIndex - 1, (int)dayCmb.SelectedItem),
                 emailAddress = emailTxt.Text
             };
         }
-        public void getStoreName(firstSetupModel fsm)
+
+        public void getData(firstSetupModel fsm)
         {
             storenameLbl.Text = $"{fsm.storeName}";
+            dbpassword = fsm.dbPassword;
+            dbname = fsm.dbName;
         }
+
+        
         public void fillDay()
         {
             dayCmb.Items.Clear();
@@ -127,6 +136,9 @@ namespace Inventory_Management_v1._0._3
             this.AcceptButton = nextBtn;
             this.Opacity = 0.1;
             fade.Start();
+            next = false;
+            back = false;
+
         }
 
         //Validations
@@ -223,7 +235,7 @@ namespace Inventory_Management_v1._0._3
         {
             firstSetupModel fsm = new firstSetupModel();
             InitializeComponent();
-            getStoreName(fsm);
+            getData(fsm);
             formReset();
         }
 
@@ -337,22 +349,67 @@ namespace Inventory_Management_v1._0._3
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (this.Opacity <= 1.0)
+            if (flag)
             {
-                this.Opacity += 0.2;
+                if (this.Opacity <= 1.0)
+                {
+                    this.Opacity += 0.2;
+                }
+                else
+                {
+                    fade.Stop();
+                }
             }
             else
             {
-                fade.Stop();
+                if (next)
+                {
+                    if (this.Opacity > 0.0)
+                    {
+                        this.Opacity -= 0.2;
+                    }
+                    else
+                    {
+                        fade.Stop();
+                        firstSetupModel fsm = setData();
+                        CreateAdminPassForm next = new CreateAdminPassForm();
+                        next.getData(fsm);
+                        this.Hide();
+                        next.Show();
+                    }
+                }
+                if (back)
+                {
+                    if (this.Opacity > 0.0)
+                    {
+                        this.Opacity -= 0.2;
+                    }
+                    else
+                    {
+                        fade.Stop();
+                        firstSetupModel fsm = setData();
+                        RegisterstoreForm back = new RegisterstoreForm();
+                        back.getData(fsm);
+                        this.Hide();
+                        back.Show();
+                    }
+                }
+
             }
         }
 
         private void nextBtn_Click(object sender, EventArgs e)
         {
-            firstSetupModel fsm = setData();
-            CreateAdminPassForm next = new CreateAdminPassForm();
-            this.Hide();
-            next.Show();
+            flag = false;
+            fade.Start();
+            next = true;
+        }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            flag = false;
+            fade.Start();
+            back = true;
         }
     }
 }

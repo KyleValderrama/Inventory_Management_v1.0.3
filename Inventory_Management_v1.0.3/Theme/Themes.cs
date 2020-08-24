@@ -13,6 +13,7 @@ using System.Runtime.Remoting.Channels;
 using System.Management.Instrumentation;
 using Inventory_Management_v1;
 using System.Runtime.InteropServices;
+using Inventory_Management_v1._0._3.Controls;
 
 namespace Inventory_Management_v1._0._3
 {
@@ -40,17 +41,26 @@ namespace Inventory_Management_v1._0._3
                 myControl.ForeColor = Color.White;
                 myControl.BackColor = Color.FromArgb(64, 64, 66);
             }
-            if (myControl is CustomComboBox)
+            if (myControl is CustomButtonBack)
             {
-                myControl.ForeColor = Color.White;
-                myControl.BackColor = Color.FromArgb(64, 64, 66);
+                ((CustomButtonBack)myControl).FlatAppearance.MouseOverBackColor = Color.FromArgb(63, 63, 65);
+                ((CustomButtonBack)myControl).FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 122, 204);
+                ((CustomButtonBack)myControl).Image = Properties.Resources.icon_back_01;
             }
-
 
 
             foreach (Control subC in myControl.Controls)
             {
                     ThemeDark(subC);
+            }
+        }
+
+
+        public static void ThemeLightbtn(CustomButtonBack myControl)
+        {
+            if (myControl is CustomButtonBack)
+            {
+                
             }
         }
         public static void UpdateThemeDark(Form thisForm, Button btnMin, Button btnExit, ToolTip ttipText, Button btnSwitch)
@@ -68,7 +78,7 @@ namespace Inventory_Management_v1._0._3
             ttipText.SetToolTip(btnSwitch, "Switch To Light Mode");
             foreach (Control c in thisForm.Controls)
             {
-                    ThemeDark(c);
+                ThemeDark(c);
             }
 
         }
@@ -92,7 +102,14 @@ namespace Inventory_Management_v1._0._3
                 myControl.ForeColor = Color.Black;
                 myControl.BackColor = Color.Gainsboro;
             }
-           
+
+            if (myControl is CustomButtonBack)
+            {
+                ((CustomButtonBack)myControl).FlatAppearance.MouseOverBackColor = Color.LightGray;
+                ((CustomButtonBack)myControl).FlatAppearance.MouseDownBackColor = Color.FromArgb(202, 202, 203);
+                ((CustomButtonBack)myControl).Image = Properties.Resources.icon_back_black_01;
+            }
+
             foreach (Control subC in myControl.Controls)
             {
                 ThemeLight(subC);
@@ -114,6 +131,7 @@ namespace Inventory_Management_v1._0._3
             {
                 ThemeLight(c);
             }
+
         }
 
 

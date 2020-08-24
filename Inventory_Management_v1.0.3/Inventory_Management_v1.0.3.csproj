@@ -72,6 +72,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\CustomButtonBack.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Forms\AdminaccountForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +96,12 @@
     <Compile Include="Forms\CreateAdminPassForm.Designer.cs">
       <DependentUpon>CreateAdminPassForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FirstSetupSummaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FirstSetupSummaryForm.Designer.cs">
+      <DependentUpon>FirstSetupSummaryForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\firstSetupModel.cs" />
     <Compile Include="Forms\RegisterstoreForm.cs">
       <SubType>Form</SubType>
@@ -105,6 +114,8 @@
     <Compile Include="SQLiteDataAccess.cs" />
     <Compile Include="Theme\Themes.cs" />
     <Compile Include="Theme\TopPanel.cs" />
+    <None Include="Resources\icon_back-01.png" />
+    <None Include="Resources\icon_back_black-01.png" />
     <None Include="Resources\darkmode_icon_dark-01.png" />
     <None Include="Resources\darkmode_icon-01.png" />
     <EmbeddedResource Include="Forms\AdminaccountForm.resx">
@@ -112,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CreateAdminPassForm.resx">
       <DependentUpon>CreateAdminPassForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FirstSetupSummaryForm.resx">
+      <DependentUpon>FirstSetupSummaryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RegisterstoreForm.resx">
       <DependentUpon>RegisterstoreForm.cs</DependentUpon>

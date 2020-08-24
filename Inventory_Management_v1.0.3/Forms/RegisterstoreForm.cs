@@ -69,12 +69,16 @@ namespace Inventory_Management_v1._0._3
         }
 
         //Methods
+        public void getData(firstSetupModel fsm)
+        {
+            storenameTxt.Text = fsm.storeName;
+        }
         private firstSetupModel setData()
         {
             return new firstSetupModel
             {
                 storeName = storenameTxt.Text,
-                dbName = storenameTxt.Text.Replace(" ", $"{ (String.Empty).ToLower() } db"),
+                dbName = storedbnameLbl.Text,
                 dbPassword = passwordTxt.Text
             };
         }
@@ -245,12 +249,8 @@ namespace Inventory_Management_v1._0._3
         private void nextBtn_Click(object sender, EventArgs e)
         {
             flag = false;
-            fade.Start();
-            firstSetupModel fsm = setData();
-            AdminaccountForm next = new AdminaccountForm();
-            next.getStoreName(fsm);          
+            fade.Start();                     
         }
-
         private void toolTip1_Popup(object sender, PopupEventArgs e)
         {
 
@@ -277,6 +277,8 @@ namespace Inventory_Management_v1._0._3
                 else
                 {
                     AdminaccountForm next = new AdminaccountForm();
+                    firstSetupModel fsm = setData();
+                    next.getData(fsm);
                     fade.Stop();
                     this.Hide();
                     next.Show();
