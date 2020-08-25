@@ -41,6 +41,9 @@
     <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.2.0.35\lib\net461\Dapper.dll</HintPath>
     </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.0.8, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.0.8\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="MaterialSkin, Version=2.1.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialSkin.2.2.1.2\lib\net461\MaterialSkin.dll</HintPath>
     </Reference>
@@ -75,6 +78,9 @@
     <Compile Include="Controls\CustomButtonBack.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Controls\ShowPassBtn.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Forms\AdminaccountForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,18 @@
     <Compile Include="Forms\FirstSetupSummaryForm.Designer.cs">
       <DependentUpon>FirstSetupSummaryForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\LoaderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoaderForm.Designer.cs">
+      <DependentUpon>LoaderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WelcomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WelcomeForm.Designer.cs">
+      <DependentUpon>WelcomeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\firstSetupModel.cs" />
     <Compile Include="Forms\RegisterstoreForm.cs">
       <SubType>Form</SubType>
@@ -109,11 +127,21 @@
     <Compile Include="Forms\RegisterstoreForm.Designer.cs">
       <DependentUpon>RegisterstoreForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\StoreData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="SQLiteDataAccess.cs" />
     <Compile Include="Theme\Themes.cs" />
     <Compile Include="Theme\TopPanel.cs" />
+    <None Include="Resources\icon_check_reverse-01.png" />
+    <None Include="Resources\icon_check_green-01.png" />
+    <None Include="Resources\icon_eye_lightgrey_big-01.png" />
+    <None Include="Resources\icon_eye_grey_big-01.png" />
     <None Include="Resources\icon_back-01.png" />
     <None Include="Resources\icon_back_black-01.png" />
     <None Include="Resources\darkmode_icon_dark-01.png" />
@@ -127,19 +155,20 @@
     <EmbeddedResource Include="Forms\FirstSetupSummaryForm.resx">
       <DependentUpon>FirstSetupSummaryForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoaderForm.resx">
+      <DependentUpon>LoaderForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\RegisterstoreForm.resx">
       <DependentUpon>RegisterstoreForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WelcomeForm.resx">
+      <DependentUpon>WelcomeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Content Include="firstSetupDb.db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

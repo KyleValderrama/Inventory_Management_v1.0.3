@@ -32,31 +32,31 @@
             this.WinformBorder = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.agreeChk = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.nextBtn = new Inventory_Management_v1._0._3.CustomButton1();
+            this.customLabel18 = new Inventory_Management_v1._0._3.CustomLabel1();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.customLabel13 = new Inventory_Management_v1._0._3.CustomLabel1();
+            this.customLabel15 = new Inventory_Management_v1._0._3.CustomLabel1();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.lbl = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.WinformTtl = new System.Windows.Forms.Panel();
-            this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.WinformTtb = new System.Windows.Forms.Panel();
-            this.themeToolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.fade = new System.Windows.Forms.Timer(this.components);
-            this.switchBtn = new System.Windows.Forms.Button();
-            this.ExitBtn = new System.Windows.Forms.Button();
-            this.MinimizeBtn = new System.Windows.Forms.Button();
-            this.nextBtn = new Inventory_Management_v1._0._3.CustomButton1();
-            this.customLabel18 = new Inventory_Management_v1._0._3.CustomLabel1();
-            this.customLabel13 = new Inventory_Management_v1._0._3.CustomLabel1();
-            this.customLabel15 = new Inventory_Management_v1._0._3.CustomLabel1();
             this.emailLbl = new Inventory_Management_v1._0._3.CustomLabel1();
             this.birthdateLbl = new Inventory_Management_v1._0._3.CustomLabel1();
             this.adminnameLbl = new Inventory_Management_v1._0._3.CustomLabel1();
             this.storenamedbLbl = new Inventory_Management_v1._0._3.CustomLabel1();
             this.storenameLbl = new Inventory_Management_v1._0._3.CustomLabel1();
+            this.lbl = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.WinformTtl = new System.Windows.Forms.Panel();
             this.customLabel12 = new Inventory_Management_v1._0._3.CustomLabel1();
+            this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.WinformTtb = new System.Windows.Forms.Panel();
             this.backBtn = new Inventory_Management_v1._0._3.Controls.CustomButtonBack();
+            this.switchBtn = new System.Windows.Forms.Button();
+            this.ExitBtn = new System.Windows.Forms.Button();
+            this.MinimizeBtn = new System.Windows.Forms.Button();
+            this.themeToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.fade = new System.Windows.Forms.Timer(this.components);
             this.WinformBorder.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -91,7 +91,7 @@
             // 
             // agreeChk
             // 
-            this.agreeChk.BackColor = System.Drawing.Color.DodgerBlue;
+            this.agreeChk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
             this.agreeChk.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
             this.agreeChk.Checked = false;
             this.agreeChk.CheckedOnColor = System.Drawing.Color.DodgerBlue;
@@ -101,6 +101,34 @@
             this.agreeChk.Size = new System.Drawing.Size(20, 20);
             this.agreeChk.TabIndex = 5;
             this.agreeChk.OnChange += new System.EventHandler(this.agreeChk_OnChange);
+            // 
+            // nextBtn
+            // 
+            this.nextBtn.BackColor = System.Drawing.Color.DodgerBlue;
+            this.nextBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.nextBtn.FlatAppearance.BorderSize = 0;
+            this.nextBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nextBtn.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nextBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.nextBtn.Location = new System.Drawing.Point(145, 60);
+            this.nextBtn.Name = "nextBtn";
+            this.nextBtn.Size = new System.Drawing.Size(129, 38);
+            this.nextBtn.TabIndex = 0;
+            this.nextBtn.Text = "Continue";
+            this.nextBtn.UseVisualStyleBackColor = false;
+            this.nextBtn.Click += new System.EventHandler(this.nextBtn_Click);
+            // 
+            // customLabel18
+            // 
+            this.customLabel18.AutoSize = true;
+            this.customLabel18.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.customLabel18.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customLabel18.Location = new System.Drawing.Point(94, 11);
+            this.customLabel18.Name = "customLabel18";
+            this.customLabel18.Size = new System.Drawing.Size(247, 20);
+            this.customLabel18.TabIndex = 4;
+            this.customLabel18.Text = "Yes, all information above is correct.";
+            this.customLabel18.Click += new System.EventHandler(this.customLabel18_Click);
             // 
             // panel1
             // 
@@ -119,15 +147,35 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 123);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(418, 250);
+            this.panel1.Size = new System.Drawing.Size(418, 232);
             this.panel1.TabIndex = 3;
+            // 
+            // customLabel13
+            // 
+            this.customLabel13.AutoSize = true;
+            this.customLabel13.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customLabel13.Location = new System.Drawing.Point(36, 11);
+            this.customLabel13.Name = "customLabel13";
+            this.customLabel13.Size = new System.Drawing.Size(70, 32);
+            this.customLabel13.TabIndex = 4;
+            this.customLabel13.Text = "Store";
+            // 
+            // customLabel15
+            // 
+            this.customLabel15.AutoSize = true;
+            this.customLabel15.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customLabel15.Location = new System.Drawing.Point(36, 103);
+            this.customLabel15.Name = "customLabel15";
+            this.customLabel15.Size = new System.Drawing.Size(159, 32);
+            this.customLabel15.TabIndex = 4;
+            this.customLabel15.Text = "Administrator";
             // 
             // bunifuCustomLabel5
             // 
             this.bunifuCustomLabel5.AutoSize = true;
             this.bunifuCustomLabel5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel5.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(38, 188);
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(38, 193);
             this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
             this.bunifuCustomLabel5.Size = new System.Drawing.Size(103, 20);
             this.bunifuCustomLabel5.TabIndex = 3;
@@ -138,7 +186,7 @@
             this.bunifuCustomLabel4.AutoSize = true;
             this.bunifuCustomLabel4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel4.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(38, 162);
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(38, 167);
             this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
             this.bunifuCustomLabel4.Size = new System.Drawing.Size(70, 20);
             this.bunifuCustomLabel4.TabIndex = 3;
@@ -149,7 +197,7 @@
             this.bunifuCustomLabel2.AutoSize = true;
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(38, 137);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(38, 142);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(100, 20);
             this.bunifuCustomLabel2.TabIndex = 3;
@@ -160,18 +208,68 @@
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(38, 74);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(38, 70);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(112, 20);
             this.bunifuCustomLabel1.TabIndex = 3;
             this.bunifuCustomLabel1.Text = "Store DB Name";
+            // 
+            // emailLbl
+            // 
+            this.emailLbl.AutoSize = true;
+            this.emailLbl.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailLbl.Location = new System.Drawing.Point(150, 193);
+            this.emailLbl.Name = "emailLbl";
+            this.emailLbl.Size = new System.Drawing.Size(163, 20);
+            this.emailLbl.TabIndex = 4;
+            this.emailLbl.Text = "delacruzjuan@test.com";
+            // 
+            // birthdateLbl
+            // 
+            this.birthdateLbl.AutoSize = true;
+            this.birthdateLbl.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.birthdateLbl.Location = new System.Drawing.Point(150, 167);
+            this.birthdateLbl.Name = "birthdateLbl";
+            this.birthdateLbl.Size = new System.Drawing.Size(88, 20);
+            this.birthdateLbl.TabIndex = 4;
+            this.birthdateLbl.Text = "Store Name";
+            // 
+            // adminnameLbl
+            // 
+            this.adminnameLbl.AutoSize = true;
+            this.adminnameLbl.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminnameLbl.Location = new System.Drawing.Point(150, 142);
+            this.adminnameLbl.Name = "adminnameLbl";
+            this.adminnameLbl.Size = new System.Drawing.Size(109, 20);
+            this.adminnameLbl.TabIndex = 4;
+            this.adminnameLbl.Text = "Dela Cruz, Juan";
+            // 
+            // storenamedbLbl
+            // 
+            this.storenamedbLbl.AutoSize = true;
+            this.storenamedbLbl.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storenamedbLbl.Location = new System.Drawing.Point(150, 70);
+            this.storenamedbLbl.Name = "storenamedbLbl";
+            this.storenamedbLbl.Size = new System.Drawing.Size(97, 20);
+            this.storenamedbLbl.TabIndex = 4;
+            this.storenamedbLbl.Text = "storenamedb";
+            // 
+            // storenameLbl
+            // 
+            this.storenameLbl.AutoSize = true;
+            this.storenameLbl.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storenameLbl.Location = new System.Drawing.Point(150, 47);
+            this.storenameLbl.Name = "storenameLbl";
+            this.storenameLbl.Size = new System.Drawing.Size(88, 20);
+            this.storenameLbl.TabIndex = 4;
+            this.storenameLbl.Text = "Store Name";
             // 
             // lbl
             // 
             this.lbl.AutoSize = true;
             this.lbl.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lbl.Location = new System.Drawing.Point(38, 51);
+            this.lbl.Location = new System.Drawing.Point(38, 47);
             this.lbl.Name = "lbl";
             this.lbl.Size = new System.Drawing.Size(88, 20);
             this.lbl.TabIndex = 3;
@@ -186,6 +284,16 @@
             this.WinformTtl.Name = "WinformTtl";
             this.WinformTtl.Size = new System.Drawing.Size(418, 85);
             this.WinformTtl.TabIndex = 2;
+            // 
+            // customLabel12
+            // 
+            this.customLabel12.AutoSize = true;
+            this.customLabel12.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customLabel12.Location = new System.Drawing.Point(20, 6);
+            this.customLabel12.Name = "customLabel12";
+            this.customLabel12.Size = new System.Drawing.Size(177, 50);
+            this.customLabel12.TabIndex = 4;
+            this.customLabel12.Text = "Summary";
             // 
             // bunifuCustomLabel3
             // 
@@ -210,11 +318,21 @@
             this.WinformTtb.Name = "WinformTtb";
             this.WinformTtb.Size = new System.Drawing.Size(418, 38);
             this.WinformTtb.TabIndex = 0;
+            this.WinformTtb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.WinformTtb_MouseDown);
+            this.WinformTtb.MouseMove += new System.Windows.Forms.MouseEventHandler(this.WinformTtb_MouseMove);
+            this.WinformTtb.MouseUp += new System.Windows.Forms.MouseEventHandler(this.WinformTtb_MouseUp);
             // 
-            // fade
+            // backBtn
             // 
-            this.fade.Interval = 30;
-            this.fade.Tick += new System.EventHandler(this.fade_Tick);
+            this.backBtn.FlatAppearance.BorderSize = 0;
+            this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backBtn.Image = global::Inventory_Management_v1._0._3.Properties.Resources.icon_back_black_01;
+            this.backBtn.Location = new System.Drawing.Point(0, 0);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(41, 38);
+            this.backBtn.TabIndex = 5;
+            this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
             // switchBtn
             // 
@@ -254,124 +372,10 @@
             this.MinimizeBtn.TabStop = false;
             this.MinimizeBtn.UseVisualStyleBackColor = true;
             // 
-            // nextBtn
+            // fade
             // 
-            this.nextBtn.BackColor = System.Drawing.Color.DodgerBlue;
-            this.nextBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.nextBtn.FlatAppearance.BorderSize = 0;
-            this.nextBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.nextBtn.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nextBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.nextBtn.Location = new System.Drawing.Point(145, 60);
-            this.nextBtn.Name = "nextBtn";
-            this.nextBtn.Size = new System.Drawing.Size(129, 38);
-            this.nextBtn.TabIndex = 0;
-            this.nextBtn.Text = "Continue";
-            this.nextBtn.UseVisualStyleBackColor = false;
-            // 
-            // customLabel18
-            // 
-            this.customLabel18.AutoSize = true;
-            this.customLabel18.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.customLabel18.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customLabel18.Location = new System.Drawing.Point(94, 11);
-            this.customLabel18.Name = "customLabel18";
-            this.customLabel18.Size = new System.Drawing.Size(258, 20);
-            this.customLabel18.TabIndex = 4;
-            this.customLabel18.Text = "Yes, all information above are correct.";
-            this.customLabel18.Click += new System.EventHandler(this.customLabel18_Click);
-            // 
-            // customLabel13
-            // 
-            this.customLabel13.AutoSize = true;
-            this.customLabel13.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customLabel13.Location = new System.Drawing.Point(36, 19);
-            this.customLabel13.Name = "customLabel13";
-            this.customLabel13.Size = new System.Drawing.Size(70, 32);
-            this.customLabel13.TabIndex = 4;
-            this.customLabel13.Text = "Store";
-            // 
-            // customLabel15
-            // 
-            this.customLabel15.AutoSize = true;
-            this.customLabel15.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customLabel15.Location = new System.Drawing.Point(36, 100);
-            this.customLabel15.Name = "customLabel15";
-            this.customLabel15.Size = new System.Drawing.Size(159, 32);
-            this.customLabel15.TabIndex = 4;
-            this.customLabel15.Text = "Administrator";
-            // 
-            // emailLbl
-            // 
-            this.emailLbl.AutoSize = true;
-            this.emailLbl.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailLbl.Location = new System.Drawing.Point(150, 188);
-            this.emailLbl.Name = "emailLbl";
-            this.emailLbl.Size = new System.Drawing.Size(163, 20);
-            this.emailLbl.TabIndex = 4;
-            this.emailLbl.Text = "delacruzjuan@test.com";
-            // 
-            // birthdateLbl
-            // 
-            this.birthdateLbl.AutoSize = true;
-            this.birthdateLbl.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.birthdateLbl.Location = new System.Drawing.Point(150, 162);
-            this.birthdateLbl.Name = "birthdateLbl";
-            this.birthdateLbl.Size = new System.Drawing.Size(88, 20);
-            this.birthdateLbl.TabIndex = 4;
-            this.birthdateLbl.Text = "Store Name";
-            // 
-            // adminnameLbl
-            // 
-            this.adminnameLbl.AutoSize = true;
-            this.adminnameLbl.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminnameLbl.Location = new System.Drawing.Point(150, 137);
-            this.adminnameLbl.Name = "adminnameLbl";
-            this.adminnameLbl.Size = new System.Drawing.Size(109, 20);
-            this.adminnameLbl.TabIndex = 4;
-            this.adminnameLbl.Text = "Dela Cruz, Juan";
-            // 
-            // storenamedbLbl
-            // 
-            this.storenamedbLbl.AutoSize = true;
-            this.storenamedbLbl.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.storenamedbLbl.Location = new System.Drawing.Point(150, 74);
-            this.storenamedbLbl.Name = "storenamedbLbl";
-            this.storenamedbLbl.Size = new System.Drawing.Size(97, 20);
-            this.storenamedbLbl.TabIndex = 4;
-            this.storenamedbLbl.Text = "storenamedb";
-            // 
-            // storenameLbl
-            // 
-            this.storenameLbl.AutoSize = true;
-            this.storenameLbl.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.storenameLbl.Location = new System.Drawing.Point(150, 51);
-            this.storenameLbl.Name = "storenameLbl";
-            this.storenameLbl.Size = new System.Drawing.Size(88, 20);
-            this.storenameLbl.TabIndex = 4;
-            this.storenameLbl.Text = "Store Name";
-            // 
-            // customLabel12
-            // 
-            this.customLabel12.AutoSize = true;
-            this.customLabel12.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customLabel12.Location = new System.Drawing.Point(20, 6);
-            this.customLabel12.Name = "customLabel12";
-            this.customLabel12.Size = new System.Drawing.Size(177, 50);
-            this.customLabel12.TabIndex = 4;
-            this.customLabel12.Text = "Summary";
-            // 
-            // backBtn
-            // 
-            this.backBtn.FlatAppearance.BorderSize = 0;
-            this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backBtn.Image = global::Inventory_Management_v1._0._3.Properties.Resources.icon_back_black_01;
-            this.backBtn.Location = new System.Drawing.Point(0, 0);
-            this.backBtn.Name = "backBtn";
-            this.backBtn.Size = new System.Drawing.Size(41, 38);
-            this.backBtn.TabIndex = 5;
-            this.backBtn.UseVisualStyleBackColor = true;
-            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
+            this.fade.Interval = 30;
+            this.fade.Tick += new System.EventHandler(this.fade_Tick);
             // 
             // FirstSetupSummaryForm
             // 

@@ -19,6 +19,12 @@ namespace Inventory_Management_v1._0._3
         private bool passwordmatch = false;
         private bool passwordaccept = false;
         private bool flag = true;
+        private string firstname;
+        private string lastname;
+        private string middlename;
+        private DateTime birthdate;
+        private string email;
+       
 
         //Reset Form
         private void formReset()
@@ -72,6 +78,11 @@ namespace Inventory_Management_v1._0._3
         public void getData(firstSetupModel fsm)
         {
             storenameTxt.Text = fsm.storeName;
+            firstname = fsm.firstName;
+            lastname = fsm.lastName;
+            middlename = fsm.middleName;
+            email = fsm.emailAddress;
+            birthdate = fsm.birthDate;
         }
         private firstSetupModel setData()
         {
@@ -79,7 +90,12 @@ namespace Inventory_Management_v1._0._3
             {
                 storeName = storenameTxt.Text,
                 dbName = storedbnameLbl.Text,
-                dbPassword = passwordTxt.Text
+                dbPassword = passwordTxt.Text,
+                firstName = firstname,
+                lastName = lastname,
+                middleName = middlename,
+                emailAddress = email,
+                birthDate = birthdate
             };
         }
         //Validations
@@ -108,7 +124,8 @@ namespace Inventory_Management_v1._0._3
 
                 if (rg.IsMatch(passwordTxt.Text))
                 {
-                    passwordvalidLbl.Text = "Password Accepted";
+                    passwordvalidLbl.Text = "       ";
+                    passwordvalidLbl.Image = Properties.Resources.icon_check_reverse_01;
                     passwordvalidLbl.ForeColor = Color.Green;
                     passwordaccept = true;
                 }
@@ -116,6 +133,7 @@ namespace Inventory_Management_v1._0._3
                 {
                     passwordvalidLbl.Text = "Your password Should have atleast 1 UPPERCASE\n and 1 lowercase letter and a numeric character.";
                     passwordvalidLbl.ForeColor = Color.Orange;
+                    passwordvalidLbl.Image = null;
                     passwordaccept = false;
                 }
             }
@@ -124,14 +142,15 @@ namespace Inventory_Management_v1._0._3
             {
                 if (reenterTxt.Text == passwordTxt.Text)
                 {
-                    reenterLbl.Text = "Password Confirmed";
-                    reenterLbl.ForeColor = Color.Green;
+                    reenterLbl.Text = "            ";
+                    reenterLbl.Image = Properties.Resources.icon_check_reverse_01;
                     passwordmatch = true;
                 }
                 else
                 {
                     reenterLbl.Text = "Password must match.";
                     reenterLbl.ForeColor = Color.Red;
+                    reenterLbl.Image = null;
                     passwordmatch = false;
                 }
             }
@@ -139,6 +158,7 @@ namespace Inventory_Management_v1._0._3
             {
                 reenterLbl.Text = "Password must be valid.";
                 reenterLbl.ForeColor = Color.Orange;
+                reenterLbl.Image = null;
             }
             validate();
         }
@@ -165,8 +185,8 @@ namespace Inventory_Management_v1._0._3
                 {
                     if (reenterTxt.Text == passwordTxt.Text)
                     {
-                        reenterLbl.Text = "Password Confirmed";
-                        reenterLbl.ForeColor = Color.Green;
+                        reenterLbl.Text = "            ";
+                        reenterLbl.Image = Properties.Resources.icon_check_reverse_01;
                         passwordmatch = true;
                     }
                     else
@@ -174,12 +194,14 @@ namespace Inventory_Management_v1._0._3
                         reenterLbl.Text = "Password must match.";
                         reenterLbl.ForeColor = Color.Red;
                         passwordmatch = false;
+                        reenterLbl.Image = null;
                     }
                 }
                 else
                 {
                     reenterLbl.Text = "Password must be valid.";
                     reenterLbl.ForeColor = Color.Orange;
+                    reenterLbl.Image = null;
                 }
             }
             validate();
@@ -284,6 +306,48 @@ namespace Inventory_Management_v1._0._3
                     next.Show();
                 }
             }
+        }
+
+        private void showpassBtn_Click(object sender, EventArgs e)
+        {
+            /*
+            if (passwordTxt.UseSystemPasswordChar == true)
+            {
+                passwordTxt.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                passwordTxt.UseSystemPasswordChar = true;
+            }
+            */
+            if(passwordTxt.PasswordChar == '•')
+            {
+                passwordTxt.PasswordChar = '\0';
+            }
+            else
+            {
+                passwordTxt.PasswordChar = '•';
+            }
+
+        }
+
+        private void showreenterBtn_Click(object sender, EventArgs e)
+        {
+            /*
+            if (reenterTxt.UseSystemPasswordChar == true)
+            {
+                reenterTxt.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                reenterTxt.UseSystemPasswordChar = true;
+            }*/
+
+        }
+
+        private void ExitBtn_Click(object sender, EventArgs e)
+        {
+            
         }
     }   
 }

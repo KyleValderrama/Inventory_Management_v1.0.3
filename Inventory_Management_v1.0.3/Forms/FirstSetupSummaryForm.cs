@@ -53,7 +53,15 @@ namespace Inventory_Management_v1._0._3.Forms
         {
             return new firstSetupModel
             {
-
+                storeName = storenameLbl.Text,
+                dbName = storenamedbLbl.Text,
+                birthDate = Convert.ToDateTime(birthdateLbl.Text),
+                emailAddress = emailLbl.Text,
+                dbPassword = dbpassword,
+                adminPassword = adminpassword,
+                firstName = firstname,
+                lastName = lastname,
+                middleName = middlename
             };
         }
         public void getData(firstSetupModel fsm)
@@ -77,6 +85,7 @@ namespace Inventory_Management_v1._0._3.Forms
             getData(fsm);
             Themes.UpdateThemeStyle(this, MinimizeBtn, ExitBtn, switchBtn, themeToolTip);
             nextBtn.Enabled = false;
+            this.AcceptButton = nextBtn;
             this.Opacity = 0.1;
             fade.Start();
         }
@@ -148,10 +157,10 @@ namespace Inventory_Management_v1._0._3.Forms
                     {
                         fade.Stop();
                         firstSetupModel fsm = setData();
-                        //CreateAdminPassForm next = new CreateAdminPassForm();
-                        //next.getData(fsm);
-                        //this.Hide();
-                        //next.Show();
+                        LoaderForm next = new LoaderForm();
+                        next.getData(fsm);
+                        this.Close();
+                        next.Show();
                     }
                 }
                 if (back)
@@ -166,12 +175,35 @@ namespace Inventory_Management_v1._0._3.Forms
                         firstSetupModel fsm = setData();
                         CreateAdminPassForm back = new CreateAdminPassForm();
                         back.getData(fsm);
-                        this.Hide();
+                        this.Close();
                         back.Show();
                     }
                 }
 
             }
+        }
+
+        private void WinformTtb_MouseDown(object sender, MouseEventArgs e)
+        {
+            titlebarMouseDown(e);
+        }
+
+        private void WinformTtb_MouseUp(object sender, MouseEventArgs e)
+        {
+            titlebarMouseUp();
+        }
+
+        private void WinformTtb_MouseMove(object sender, MouseEventArgs e)
+        {
+            titlebarMouseMove(e);
+        }
+
+        private void nextBtn_Click(object sender, EventArgs e)
+        {
+            fade.Start();
+            flag = false;
+            next = true;
+
         }
     }
 }

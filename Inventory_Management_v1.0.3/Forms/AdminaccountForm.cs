@@ -68,16 +68,34 @@ namespace Inventory_Management_v1._0._3
                 firstName = firstnameTxt.Text,
                 lastName = lastnameTxt.Text,
                 middleName = middlenameTxt.Text,
-                birthDate = new DateTime((int)yearCmb.SelectedItem, monthCmb.SelectedIndex - 1, (int)dayCmb.SelectedItem),
+                birthDate = new DateTime((int)yearCmb.SelectedItem, monthCmb.SelectedIndex + 1, (int)dayCmb.SelectedItem),
                 emailAddress = emailTxt.Text
             };
         }
 
         public void getData(firstSetupModel fsm)
         {
+            firstnameTxt.Text = fsm.firstName;
+            lastnameTxt.Text = fsm.lastName;
+            middlenameTxt.Text = fsm.middleName;
+            emailTxt.Text = fsm.emailAddress;
             storenameLbl.Text = $"{fsm.storeName}";
             dbpassword = fsm.dbPassword;
-            dbname = fsm.dbName;
+            dbname = fsm.dbName;            
+
+            if(fsm.birthDate.Month == 1 && fsm.birthDate.Day == 1 && fsm.birthDate.Year == 1)
+            {
+                monthCmb.SelectedIndex = DateTime.Now.Month - 1;
+                yearCmb.SelectedItem = DateTime.Now.Year - 18;
+                dayCmb.SelectedItem = DateTime.Now.Day;
+            }
+            else
+            {
+                monthCmb.SelectedIndex = fsm.birthDate.Month - 1;
+                dayCmb.SelectedItem = fsm.birthDate.Day;
+                yearCmb.SelectedItem = fsm.birthDate.Year;
+            }
+
         }
 
         
@@ -118,6 +136,7 @@ namespace Inventory_Management_v1._0._3
         }
         private void formReset()
         {
+            firstSetupModel fsm = new firstSetupModel();
             Themes.UpdateThemeStyle(this, MinimizeBtn, ExitBtn, switchBtn, themeToolTip);
             firstnameTxt.Text = "";
             lastnameTxt.Text = "";
@@ -128,14 +147,13 @@ namespace Inventory_Management_v1._0._3
             monthCmb.Hide();
             dayCmb.Hide();
             yearCmb.Hide();
-            monthCmb.DataSource = CultureInfo.InvariantCulture.DateTimeFormat.MonthNames.Take(12).ToList();
-            monthCmb.SelectedIndex = DateTime.Now.Month - 1;
-            yearCmb.DataSource = Enumerable.Range(1940, (DateTime.Now.Year-18) - 1940 + 1).ToList();
-            yearCmb.SelectedItem = DateTime.Now.Year - 18;
-            dayCmb.SelectedItem = DateTime.Now.Day;
+            monthCmb.DataSource = CultureInfo.InvariantCulture.DateTimeFormat.MonthNames.Take(12).ToList();            
+            yearCmb.DataSource = Enumerable.Range(1940, (DateTime.Now.Year-18) - 1940 + 1).ToList();        
+            getData(fsm);
             this.AcceptButton = nextBtn;
             this.Opacity = 0.1;
             fade.Start();
+            this.ActiveControl = firstnameTxt;
             next = false;
             back = false;
 
@@ -186,14 +204,15 @@ namespace Inventory_Management_v1._0._3
 
                 if (rg.IsMatch(emailTxt.Text))
                 {
-                    emailvalidLbl.Text = "Email Valid";
-                    emailvalidLbl.ForeColor = Color.Green;
+                    emailvalidLbl.Text = "            ";
+                    emailvalidLbl.Image = Properties.Resources.icon_check_reverse_01;
                     emailvalid = true;
                 }
                 else
                 {
                     emailvalidLbl.Text = "You must enter a valid email address.";
                     emailvalidLbl.ForeColor = Color.Orange;
+                    emailvalidLbl.Image = null;
                     emailvalid = false;
                 }
                 validate();
@@ -226,17 +245,27 @@ namespace Inventory_Management_v1._0._3
         }
         private void middlenameValidation()
         {
-            namevalidLbl.Text = $"Full Name : { lastnameTxt.Text }, { firstnameTxt.Text } {  middlenameTxt.Text}";
+            if (lastnameTxt.Text != "" && firstnameTxt.Text != "")
+            {
+                namevalidLbl.Text = $"Full Name : { lastnameTxt.Text }, { firstnameTxt.Text } {  middlenameTxt.Text}";
+            }
+            else
+            {
+                namevalidLbl.Text = "Fill-up Required Fields.";
+                namevalidLbl.ForeColor = Color.Orange;
+                lastnamevalid = false;
+            }
+
         }
 
 
         // Form Start
         public AdminaccountForm()
         {
-            firstSetupModel fsm = new firstSetupModel();
-            InitializeComponent();
-            getData(fsm);
+            
+            InitializeComponent();           
             formReset();
+            
         }
 
         private void firstnameTxt_TextChanged(object sender, EventArgs e)
@@ -374,7 +403,7 @@ namespace Inventory_Management_v1._0._3
                         firstSetupModel fsm = setData();
                         CreateAdminPassForm next = new CreateAdminPassForm();
                         next.getData(fsm);
-                        this.Hide();
+                        this.Close();
                         next.Show();
                     }
                 }
@@ -390,7 +419,7 @@ namespace Inventory_Management_v1._0._3
                         firstSetupModel fsm = setData();
                         RegisterstoreForm back = new RegisterstoreForm();
                         back.getData(fsm);
-                        this.Hide();
+                        this.Close();
                         back.Show();
                     }
                 }

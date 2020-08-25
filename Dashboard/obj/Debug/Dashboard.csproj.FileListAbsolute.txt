@@ -1,0 +1,6 @@
+C:\Users\Kyle\source\repos\Inventory_Management_v1.0.3\Dashboard\bin\Debug\Dashboard.dll
+C:\Users\Kyle\source\repos\Inventory_Management_v1.0.3\Dashboard\bin\Debug\Dashboard.pdb
+C:\Users\Kyle\source\repos\Inventory_Management_v1.0.3\Dashboard\obj\Debug\Dashboard.csprojAssemblyReference.cache
+C:\Users\Kyle\source\repos\Inventory_Management_v1.0.3\Dashboard\obj\Debug\Dashboard.csproj.CoreCompileInputs.cache
+C:\Users\Kyle\source\repos\Inventory_Management_v1.0.3\Dashboard\obj\Debug\Dashboard.dll
+C:\Users\Kyle\source\repos\Inventory_Management_v1.0.3\Dashboard\obj\Debug\Dashboard.pdb

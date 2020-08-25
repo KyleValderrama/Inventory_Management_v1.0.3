@@ -44,6 +44,7 @@
             this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
             this.reenterTxt = new System.Windows.Forms.TextBox();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
+            this.showpassBtn = new Inventory_Management_v1._0._3.Controls.ShowPassBtn();
             this.passwordTxt = new System.Windows.Forms.TextBox();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.storenameTxt = new System.Windows.Forms.TextBox();
@@ -129,7 +130,8 @@
             // 
             this.reenterLbl.AutoSize = true;
             this.reenterLbl.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reenterLbl.Location = new System.Drawing.Point(354, 213);
+            this.reenterLbl.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.reenterLbl.Location = new System.Drawing.Point(345, 213);
             this.reenterLbl.Name = "reenterLbl";
             this.reenterLbl.Size = new System.Drawing.Size(139, 20);
             this.reenterLbl.TabIndex = 5;
@@ -139,7 +141,8 @@
             // 
             this.passwordvalidLbl.AutoSize = true;
             this.passwordvalidLbl.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordvalidLbl.Location = new System.Drawing.Point(354, 135);
+            this.passwordvalidLbl.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.passwordvalidLbl.Location = new System.Drawing.Point(345, 135);
             this.passwordvalidLbl.Name = "passwordvalidLbl";
             this.passwordvalidLbl.Size = new System.Drawing.Size(107, 20);
             this.passwordvalidLbl.TabIndex = 5;
@@ -149,7 +152,7 @@
             // 
             this.customLabel17.AutoSize = true;
             this.customLabel17.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customLabel17.Location = new System.Drawing.Point(354, 58);
+            this.customLabel17.Location = new System.Drawing.Point(345, 58);
             this.customLabel17.Name = "customLabel17";
             this.customLabel17.Size = new System.Drawing.Size(123, 20);
             this.customLabel17.TabIndex = 4;
@@ -190,7 +193,7 @@
             this.storedbnameLbl.AutoSize = true;
             this.storedbnameLbl.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.storedbnameLbl.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.storedbnameLbl.Location = new System.Drawing.Point(483, 58);
+            this.storedbnameLbl.Location = new System.Drawing.Point(465, 58);
             this.storedbnameLbl.Name = "storedbnameLbl";
             this.storedbnameLbl.Size = new System.Drawing.Size(84, 20);
             this.storedbnameLbl.TabIndex = 3;
@@ -244,6 +247,7 @@
             // 
             this.metroPanel2.BackColor = System.Drawing.Color.Gainsboro;
             this.metroPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.metroPanel2.Controls.Add(this.showpassBtn);
             this.metroPanel2.Controls.Add(this.passwordTxt);
             this.metroPanel2.HorizontalScrollbarBarColor = true;
             this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
@@ -259,6 +263,19 @@
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel2.VerticalScrollbarSize = 10;
             // 
+            // showpassBtn
+            // 
+            this.showpassBtn.FlatAppearance.BorderSize = 0;
+            this.showpassBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showpassBtn.Image = global::Inventory_Management_v1._0._3.Properties.Resources.icon_eye_grey_big_01;
+            this.showpassBtn.Location = new System.Drawing.Point(257, -1);
+            this.showpassBtn.Name = "showpassBtn";
+            this.showpassBtn.Size = new System.Drawing.Size(47, 38);
+            this.showpassBtn.TabIndex = 6;
+            this.showpassBtn.TabStop = false;
+            this.showpassBtn.UseVisualStyleBackColor = true;
+            this.showpassBtn.Click += new System.EventHandler(this.showpassBtn_Click);
+            // 
             // passwordTxt
             // 
             this.passwordTxt.BackColor = System.Drawing.Color.Gainsboro;
@@ -267,7 +284,7 @@
             this.passwordTxt.Location = new System.Drawing.Point(7, 8);
             this.passwordTxt.Name = "passwordTxt";
             this.passwordTxt.PasswordChar = '•';
-            this.passwordTxt.Size = new System.Drawing.Size(287, 20);
+            this.passwordTxt.Size = new System.Drawing.Size(253, 20);
             this.passwordTxt.TabIndex = 2;
             this.passwordTxt.Text = "Password";
             this.passwordTxt.TextChanged += new System.EventHandler(this.passwordTxt_TextChanged);
@@ -367,7 +384,6 @@
             this.switchBtn.FlatAppearance.BorderSize = 0;
             this.switchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.switchBtn.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.switchBtn.Image = global::Inventory_Management_v1._0._3.Properties.Resources.darkmode_icon_01;
             this.switchBtn.Location = new System.Drawing.Point(621, 0);
             this.switchBtn.Name = "switchBtn";
             this.switchBtn.Size = new System.Drawing.Size(43, 38);
@@ -381,19 +397,18 @@
             // 
             this.ExitBtn.FlatAppearance.BorderSize = 0;
             this.ExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ExitBtn.Image = global::Inventory_Management_v1._0._3.Properties.Resources.close_icon_black_01;
             this.ExitBtn.Location = new System.Drawing.Point(752, 0);
             this.ExitBtn.Name = "ExitBtn";
             this.ExitBtn.Size = new System.Drawing.Size(48, 38);
             this.ExitBtn.TabIndex = 0;
             this.ExitBtn.TabStop = false;
             this.ExitBtn.UseVisualStyleBackColor = true;
+            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
             // MinimizeBtn
             // 
             this.MinimizeBtn.FlatAppearance.BorderSize = 0;
             this.MinimizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MinimizeBtn.Image = global::Inventory_Management_v1._0._3.Properties.Resources.minimize_icon_black_01;
             this.MinimizeBtn.Location = new System.Drawing.Point(704, 0);
             this.MinimizeBtn.Name = "MinimizeBtn";
             this.MinimizeBtn.Size = new System.Drawing.Size(48, 38);
@@ -470,6 +485,7 @@
         private CustomButton1 nextBtn;
         private System.Windows.Forms.ToolTip themeToolTip;
         private System.Windows.Forms.Timer fade;
+        private Controls.ShowPassBtn showpassBtn;
     }
 }
 

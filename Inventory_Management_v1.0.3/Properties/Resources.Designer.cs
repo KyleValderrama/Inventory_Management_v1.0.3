@@ -123,9 +123,49 @@ namespace Inventory_Management_v1._0._3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_check_green_01 {
+            get {
+                object obj = ResourceManager.GetObject("icon_check_green-01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_check_reverse_01 {
+            get {
+                object obj = ResourceManager.GetObject("icon_check_reverse-01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_close_black_01 {
             get {
                 object obj = ResourceManager.GetObject("icon_close_black-01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_eye_grey_big_01 {
+            get {
+                object obj = ResourceManager.GetObject("icon_eye_grey_big-01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_eye_lightgrey_big_01 {
+            get {
+                object obj = ResourceManager.GetObject("icon_eye_lightgrey_big-01", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

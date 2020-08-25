@@ -90,6 +90,7 @@ namespace Inventory_Management_v1._0._3.Forms
 
         private void formReset()
         {
+            Themes.UpdateThemeStyle(this, MinimizeBtn, ExitBtn, switchBtn, themeToolTip);
             firstSetupModel fsm = new firstSetupModel();
             getData(fsm);                    
             passwordTxt.Text = "";
@@ -97,6 +98,8 @@ namespace Inventory_Management_v1._0._3.Forms
             passwordvalidLbl.Text = "";
             reentervalidLbl.Text = "";
             nextBtn.Enabled = false;
+            this.ActiveControl = passwordTxt;
+            this.AcceptButton = nextBtn;
             this.Opacity = 0.1;
             fade.Start();
             next = false;
@@ -129,7 +132,8 @@ namespace Inventory_Management_v1._0._3.Forms
 
                 if (rg.IsMatch(passwordTxt.Text))
                 {
-                    passwordvalidLbl.Text = "Password Accepted";
+                    passwordvalidLbl.Text = "       ";
+                    passwordvalidLbl.Image = Properties.Resources.icon_check_reverse_01;
                     passwordvalidLbl.ForeColor = Color.Green;
                     passwordaccept = true;
                 }
@@ -137,6 +141,7 @@ namespace Inventory_Management_v1._0._3.Forms
                 {
                     passwordvalidLbl.Text = "Your password Should have atleast 1 UPPERCASE\n and 1 lowercase letter and a numeric character.";
                     passwordvalidLbl.ForeColor = Color.Orange;
+                    passwordvalidLbl.Image = null;
                     passwordaccept = false;
                 }
             }
@@ -145,14 +150,15 @@ namespace Inventory_Management_v1._0._3.Forms
             {
                 if (reenterTxt.Text == passwordTxt.Text)
                 {
-                    reentervalidLbl.Text = "Password Confirmed";
-                    reentervalidLbl.ForeColor = Color.Green;
+                    reentervalidLbl.Text = "            ";
+                    reentervalidLbl.Image = Properties.Resources.icon_check_reverse_01;
                     passwordmatch = true;
                 }
                 else
                 {
                     reentervalidLbl.Text = "Password must match.";
                     reentervalidLbl.ForeColor = Color.Red;
+                    reentervalidLbl.Image = null;
                     passwordmatch = false;
                 }
             }
@@ -160,6 +166,7 @@ namespace Inventory_Management_v1._0._3.Forms
             {
                 reentervalidLbl.Text = "Password must be valid.";
                 reentervalidLbl.ForeColor = Color.Orange;
+                reentervalidLbl.Image = null;
             }
             validate();
         }
@@ -174,13 +181,15 @@ namespace Inventory_Management_v1._0._3.Forms
                 {
                     if (reenterTxt.Text == passwordTxt.Text)
                     {
-                        reentervalidLbl.Text = "Password Confirmed";
+                        reentervalidLbl.Text = "            ";
+                        reentervalidLbl.Image = Properties.Resources.icon_check_reverse_01;
                         reentervalidLbl.ForeColor = Color.Green;
                         passwordmatch = true;
                     }
                     else
                     {
                         reentervalidLbl.Text = "Password must match.";
+                        reentervalidLbl.Image = null;
                         reentervalidLbl.ForeColor = Color.Red;
                         passwordmatch = false;
                     }
@@ -189,6 +198,7 @@ namespace Inventory_Management_v1._0._3.Forms
                 {
                     reentervalidLbl.Text = "Password must be valid.";
                     reentervalidLbl.ForeColor = Color.Orange;
+                    reentervalidLbl.Image = null;
                 }
             }
             validate();
@@ -265,7 +275,7 @@ namespace Inventory_Management_v1._0._3.Forms
                         firstSetupModel fsm = setData();
                         FirstSetupSummaryForm next = new FirstSetupSummaryForm();
                         next.getData(fsm);
-                        this.Hide();
+                        this.Close();
                         next.Show();
                     }
                 }
@@ -281,10 +291,29 @@ namespace Inventory_Management_v1._0._3.Forms
                         firstSetupModel fsm = setData();
                         AdminaccountForm back = new AdminaccountForm();
                         back.getData(fsm);
-                        this.Hide();
+                        this.Close();
                         back.Show();
                     }
                 }
+            }
+        }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            flag = false;
+            fade.Start();
+            back = true;
+        }
+
+        private void showpassBtn_Click(object sender, EventArgs e)
+        {
+            if (passwordTxt.PasswordChar == '•')
+            {
+                passwordTxt.PasswordChar = '\0';
+            }
+            else
+            {
+                passwordTxt.PasswordChar = '•';
             }
         }
     }

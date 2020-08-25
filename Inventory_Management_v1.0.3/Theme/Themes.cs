@@ -41,11 +41,27 @@ namespace Inventory_Management_v1._0._3
                 myControl.ForeColor = Color.White;
                 myControl.BackColor = Color.FromArgb(64, 64, 66);
             }
+            if(myControl is ProgressBar)
+            {
+                myControl.BackColor = Color.FromArgb(64, 64, 66);
+            }
+            if (myControl is CustomComboBox)
+            {
+                myControl.BackColor = Color.FromArgb(64, 64, 66);
+                myControl.ForeColor = Color.White;
+            }
             if (myControl is CustomButtonBack)
             {
                 ((CustomButtonBack)myControl).FlatAppearance.MouseOverBackColor = Color.FromArgb(63, 63, 65);
                 ((CustomButtonBack)myControl).FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 122, 204);
                 ((CustomButtonBack)myControl).Image = Properties.Resources.icon_back_01;
+            }
+
+            if (myControl is ShowPassBtn)
+            {
+                ((ShowPassBtn)myControl).FlatAppearance.MouseOverBackColor = Color.FromArgb(63, 63, 65);
+                ((ShowPassBtn)myControl).FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 122, 204);
+                ((ShowPassBtn)myControl).Image = Properties.Resources.icon_eye_lightgrey_big_01;
             }
 
 
@@ -108,6 +124,13 @@ namespace Inventory_Management_v1._0._3
                 ((CustomButtonBack)myControl).FlatAppearance.MouseOverBackColor = Color.LightGray;
                 ((CustomButtonBack)myControl).FlatAppearance.MouseDownBackColor = Color.FromArgb(202, 202, 203);
                 ((CustomButtonBack)myControl).Image = Properties.Resources.icon_back_black_01;
+            }
+
+            if (myControl is ShowPassBtn)
+            {
+                ((ShowPassBtn)myControl).FlatAppearance.MouseOverBackColor = Color.LightGray;
+                ((ShowPassBtn)myControl).FlatAppearance.MouseDownBackColor = Color.FromArgb(202, 202, 203);
+                ((ShowPassBtn)myControl).Image = Properties.Resources.icon_eye_grey_big_01;
             }
 
             foreach (Control subC in myControl.Controls)

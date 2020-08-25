@@ -174,6 +174,7 @@
             // 
             this.emailvalidLbl.AutoSize = true;
             this.emailvalidLbl.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailvalidLbl.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.emailvalidLbl.Location = new System.Drawing.Point(332, 249);
             this.emailvalidLbl.Name = "emailvalidLbl";
             this.emailvalidLbl.Size = new System.Drawing.Size(83, 20);

@@ -53,12 +53,13 @@
             this.lbl = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.WinformTtb = new System.Windows.Forms.Panel();
+            this.backBtn = new Inventory_Management_v1._0._3.Controls.CustomButtonBack();
             this.switchBtn = new System.Windows.Forms.Button();
             this.ExitBtn = new System.Windows.Forms.Button();
             this.MinimizeBtn = new System.Windows.Forms.Button();
             this.fade = new System.Windows.Forms.Timer(this.components);
             this.themeToolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.backBtn = new Inventory_Management_v1._0._3.Controls.CustomButtonBack();
+            this.showpassBtn = new Inventory_Management_v1._0._3.Controls.ShowPassBtn();
             this.WinformBorder.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -126,7 +127,8 @@
             // 
             this.reentervalidLbl.AutoSize = true;
             this.reentervalidLbl.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reentervalidLbl.Location = new System.Drawing.Point(384, 106);
+            this.reentervalidLbl.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.reentervalidLbl.Location = new System.Drawing.Point(380, 106);
             this.reentervalidLbl.Name = "reentervalidLbl";
             this.reentervalidLbl.Size = new System.Drawing.Size(83, 20);
             this.reentervalidLbl.TabIndex = 5;
@@ -136,7 +138,8 @@
             // 
             this.passwordvalidLbl.AutoSize = true;
             this.passwordvalidLbl.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordvalidLbl.Location = new System.Drawing.Point(384, 34);
+            this.passwordvalidLbl.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.passwordvalidLbl.Location = new System.Drawing.Point(380, 34);
             this.passwordvalidLbl.Name = "passwordvalidLbl";
             this.passwordvalidLbl.Size = new System.Drawing.Size(83, 20);
             this.passwordvalidLbl.TabIndex = 5;
@@ -198,6 +201,7 @@
             // 
             this.metroPanel1.BackColor = System.Drawing.Color.Gainsboro;
             this.metroPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.metroPanel1.Controls.Add(this.showpassBtn);
             this.metroPanel1.Controls.Add(this.passwordTxt);
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
@@ -364,6 +368,18 @@
             this.WinformTtb.MouseMove += new System.Windows.Forms.MouseEventHandler(this.WinformTtb_MouseMove);
             this.WinformTtb.MouseUp += new System.Windows.Forms.MouseEventHandler(this.WinformTtb_MouseUp);
             // 
+            // backBtn
+            // 
+            this.backBtn.FlatAppearance.BorderSize = 0;
+            this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backBtn.Image = global::Inventory_Management_v1._0._3.Properties.Resources.icon_back_black_01;
+            this.backBtn.Location = new System.Drawing.Point(0, 0);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(41, 38);
+            this.backBtn.TabIndex = 6;
+            this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
+            // 
             // switchBtn
             // 
             this.switchBtn.FlatAppearance.BorderSize = 0;
@@ -407,16 +423,18 @@
             this.fade.Interval = 30;
             this.fade.Tick += new System.EventHandler(this.fade_Tick);
             // 
-            // backBtn
+            // showpassBtn
             // 
-            this.backBtn.FlatAppearance.BorderSize = 0;
-            this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backBtn.Image = global::Inventory_Management_v1._0._3.Properties.Resources.icon_back_black_01;
-            this.backBtn.Location = new System.Drawing.Point(0, 0);
-            this.backBtn.Name = "backBtn";
-            this.backBtn.Size = new System.Drawing.Size(41, 38);
-            this.backBtn.TabIndex = 6;
-            this.backBtn.UseVisualStyleBackColor = true;
+            this.showpassBtn.FlatAppearance.BorderSize = 0;
+            this.showpassBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showpassBtn.Image = global::Inventory_Management_v1._0._3.Properties.Resources.icon_eye_grey_big_01;
+            this.showpassBtn.Location = new System.Drawing.Point(295, -1);
+            this.showpassBtn.Name = "showpassBtn";
+            this.showpassBtn.Size = new System.Drawing.Size(47, 38);
+            this.showpassBtn.TabIndex = 7;
+            this.showpassBtn.TabStop = false;
+            this.showpassBtn.UseVisualStyleBackColor = true;
+            this.showpassBtn.Click += new System.EventHandler(this.showpassBtn_Click);
             // 
             // CreateAdminPassForm
             // 
@@ -475,5 +493,6 @@
         private System.Windows.Forms.ToolTip themeToolTip;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
         private Controls.CustomButtonBack backBtn;
+        private Controls.ShowPassBtn showpassBtn;
     }
 }
