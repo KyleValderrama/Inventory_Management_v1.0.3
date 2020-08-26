@@ -9,30 +9,25 @@ using System.Net;
 using System.Data;
 using Dapper;
 using Inventory_Management_v1._0._3.Models;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Inventory_Management_v1._0._3
 {
     public class SQLiteDataAccess
     {
-        public static string LoadConnectionString(string id = "firstSetupConnection")
+        public static void insertData(firstSetupModel fsm)
         {
-            return ConfigurationManager.ConnectionStrings[id].ConnectionString;
-        }
-        public static void getData(firstSetupModel fsm)
-        {
-            using (IDbConnection sqlitecon = new SQLiteConnection(LoadConnectionString()))
+            using (IDbConnection sqlitecon = new SQLiteConnection(Helper.sqlConString("firstSetupConnection")))
             {
                 sqlitecon.Execute("insert into storeDatabaseTbl (storeName, dbName, dbPassword, creatorName, timeCreated)" +
                     "values (@storeName , @dbName, @dbPassword, @fullName, datetime('now'))", fsm);
             }
         }
-
-        public static List<StoreData> loadData()
+        public List<StoreData> GetSqliteData()
         {
-            using (IDbConnection sqlitecon = new SQLiteConnection(LoadConnectionString()))
+            using (IDbConnection sqlitecon = new SQLiteConnection(Helper.sqlConString("firstSetupConnection")))
             {
-                var output = sqlitecon.Query<StoreData>("select * from storeDatabaseTbl", new DynamicParameters());
-                return output.ToList();
+                return sqlitecon.Query<StoreData>($"select * from storedatabaseTbl").ToList();
             }
         }
     }

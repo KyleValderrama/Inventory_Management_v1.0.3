@@ -14,6 +14,7 @@ using System.Management.Instrumentation;
 using Inventory_Management_v1;
 using System.Runtime.InteropServices;
 using Inventory_Management_v1._0._3.Controls;
+using Inventory_Management_v1._0._3.Properties;
 
 namespace Inventory_Management_v1._0._3
 {
@@ -30,18 +31,18 @@ namespace Inventory_Management_v1._0._3
 
         public static void ThemeDark(Control myControl)
         {
-            if(myControl is CustomLabel1)
+            if (myControl is CustomLabel1)
                 myControl.ForeColor = Color.White;
             if (myControl is BunifuCustomLabel)
                 myControl.ForeColor = Color.Gray;
             if (myControl is MetroPanel)
-                myControl.BackColor = Color.FromArgb(64,64,66);
+                myControl.BackColor = Color.FromArgb(64, 64, 66);
             if (myControl is TextBox)
             {
                 myControl.ForeColor = Color.White;
                 myControl.BackColor = Color.FromArgb(64, 64, 66);
             }
-            if(myControl is ProgressBar)
+            if (myControl is ProgressBar)
             {
                 myControl.BackColor = Color.FromArgb(64, 64, 66);
             }
@@ -67,7 +68,7 @@ namespace Inventory_Management_v1._0._3
 
             foreach (Control subC in myControl.Controls)
             {
-                    ThemeDark(subC);
+                ThemeDark(subC);
             }
         }
 
@@ -76,7 +77,7 @@ namespace Inventory_Management_v1._0._3
         {
             if (myControl is CustomButtonBack)
             {
-                
+
             }
         }
         public static void UpdateThemeDark(Form thisForm, Button btnMin, Button btnExit, ToolTip ttipText, Button btnSwitch)
@@ -98,7 +99,7 @@ namespace Inventory_Management_v1._0._3
             }
 
         }
-        
+
         public static void ThemeLight(Control myControl)
         {
             if (myControl is CustomLabel1)
@@ -113,7 +114,7 @@ namespace Inventory_Management_v1._0._3
                 myControl.BackColor = Color.Gainsboro;
             }
 
-            if(myControl is CustomComboBox)
+            if (myControl is CustomComboBox)
             {
                 myControl.ForeColor = Color.Black;
                 myControl.BackColor = Color.Gainsboro;
@@ -147,7 +148,7 @@ namespace Inventory_Management_v1._0._3
             btnMin.FlatAppearance.MouseOverBackColor = Color.LightGray;
             btnExit.FlatAppearance.MouseOverBackColor = Color.LightGray;
             btnSwitch.FlatAppearance.MouseOverBackColor = Color.LightGray;
-            btnMin.FlatAppearance.MouseDownBackColor = Color.FromArgb(202,202,203);
+            btnMin.FlatAppearance.MouseDownBackColor = Color.FromArgb(202, 202, 203);
             btnExit.FlatAppearance.MouseDownBackColor = Color.FromArgb(202, 202, 203);
             ttipText.SetToolTip(btnSwitch, "Switch To Dark Mode");
             foreach (Control c in thisForm.Controls)
@@ -158,7 +159,7 @@ namespace Inventory_Management_v1._0._3
         }
 
 
-        public static string ThemeStyle = "Light";
+        public static string ThemeStyle = Settings.Default["Themestyle"].ToString();
         
         public static void UpdateThemeStyle(Form thisForm, Button btnMin, Button btnExit, Button btnSwitch, ToolTip ttip)
         {

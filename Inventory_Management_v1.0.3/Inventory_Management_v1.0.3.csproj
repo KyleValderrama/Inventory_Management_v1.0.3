@@ -114,12 +114,25 @@
     <Compile Include="Forms\LoaderForm.Designer.cs">
       <DependentUpon>LoaderForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\LoadingScreenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoadingScreenForm.Designer.cs">
+      <DependentUpon>LoadingScreenForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\WelcomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\WelcomeForm.Designer.cs">
       <DependentUpon>WelcomeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helper.cs" />
     <Compile Include="Models\firstSetupModel.cs" />
     <Compile Include="Forms\RegisterstoreForm.cs">
       <SubType>Form</SubType>
@@ -136,6 +149,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="SQLiteDataAccess.cs" />
+    <Compile Include="StoreDataAccess.cs" />
     <Compile Include="Theme\Themes.cs" />
     <Compile Include="Theme\TopPanel.cs" />
     <None Include="Resources\icon_check_reverse-01.png" />
@@ -157,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoaderForm.resx">
       <DependentUpon>LoaderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoadingScreenForm.resx">
+      <DependentUpon>LoadingScreenForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RegisterstoreForm.resx">
       <DependentUpon>RegisterstoreForm.cs</DependentUpon>

@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.Data.Common;
+using Inventory_Management_v1._0._3.Properties;
 
 namespace Inventory_Management_v1._0._3.Forms
 {
@@ -33,9 +34,16 @@ namespace Inventory_Management_v1._0._3.Forms
         private void switchTheme()
         {
             if (Themes.ThemeStyle == "Dark")
+            {
                 Themes.ThemeStyle = "Light";
+                Settings.Default["Themestyle"] = "Light";
+            }
             else if (Themes.ThemeStyle == "Light")
+            {
                 Themes.ThemeStyle = "Dark";
+                Settings.Default["Themestyle"] = "Dark";
+            }
+            Settings.Default.Save();
             Themes.UpdateThemeStyle(this, MinimizeBtn, ExitBtn, switchBtn, themeToolTip);
         }
         private void titlebarMouseUp()

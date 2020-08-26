@@ -126,8 +126,7 @@ namespace Inventory_Management_v1._0._3.Forms
                 else
                 {
                     firstSetupModel fsm = setData();
-                    SQLiteDataAccess.getData(fsm);
-                    
+                    SQLiteDataAccess.insertData(fsm);                   
                     fade.Stop();
                     this.Close();
                     WelcomeForm next = new WelcomeForm();
