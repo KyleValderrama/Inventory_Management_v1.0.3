@@ -14,7 +14,8 @@ namespace Inventory_Management_v1._0._3
         public static List<StoreData> storedata = new List<StoreData>();
         public static string storedbname;
         public static string storename;
-        public static string storeConString = $@"Server =.\POSSERVER; Database ={storedbname}; Trusted_Connection = True;";
+        public static string storeConString = $@"Server =.\POSSERVER; Database={storedbname}; Trusted_Connection = True;";
+        public static string masterConString = $@"Server =.\POSSERVER;Trusted_Connection = True;";
 
         public static string sqlConString(string name)
         {

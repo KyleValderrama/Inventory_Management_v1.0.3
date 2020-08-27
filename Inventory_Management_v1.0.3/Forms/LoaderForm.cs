@@ -93,14 +93,36 @@ namespace Inventory_Management_v1._0._3.Forms
                 flag = false;
             }
 
-            if(progressBar1.Value == 25)
+            if(progressBar1.Value == 15)
+            {
+                bunifuCustomLabel3.Text = "Collecting Data";
+                firstSetupModel fsm = setData();
+                SQLiteDataAccess.insertData(fsm);
+
+            }
+            if (progressBar1.Value == 30)
             {
                 bunifuCustomLabel3.Text = "Creating Store Database";
+                firstSetupModel fsm = setData();
+                ServerDataAccess.insertDatabase(fsm);
             }
             if (progressBar1.Value == 50)
             {
-                bunifuCustomLabel3.Text = "Securing Network Database Access";
+                bunifuCustomLabel3.Text = "Creating Tables for your Database";
+                ServerDataAccess.insertStoreTable();
             }
+            if (progressBar1.Value == 70)
+            {
+                bunifuCustomLabel3.Text = "Creating Stored Procedures";
+                ServerDataAccess.createStoredProcedure();
+            }
+            if (progressBar1.Value == 70)
+            {
+                firstSetupModel fsm = setData();
+                bunifuCustomLabel3.Text = "Creating Your User Account";
+                ServerDataAccess.insertUserAccountAdmin(fsm);
+            }
+
         }
 
         private void fade_Tick(object sender, EventArgs e)
@@ -124,9 +146,7 @@ namespace Inventory_Management_v1._0._3.Forms
                     this.Opacity -= 0.2;
                 }
                 else
-                {
-                    firstSetupModel fsm = setData();
-                    SQLiteDataAccess.insertData(fsm);                   
+                {                  
                     fade.Stop();
                     this.Close();
                     WelcomeForm next = new WelcomeForm();

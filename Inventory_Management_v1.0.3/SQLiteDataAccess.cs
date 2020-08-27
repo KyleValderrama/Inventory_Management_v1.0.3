@@ -30,5 +30,7 @@ namespace Inventory_Management_v1._0._3
                 return sqlitecon.Query<StoreData>($"select * from storedatabaseTbl").ToList();
             }
         }
+
+
     }
 }

@@ -28,3 +28,4 @@ C:\Users\Kyle\source\repos\Inventory_Management_v1.0.3\Inventory_Management_v1.0
 C:\Users\Kyle\source\repos\Inventory_Management_v1.0.3\Inventory_Management_v1.0.3\bin\Debug\Guna.UI2.dll
 C:\Users\Kyle\source\repos\Inventory_Management_v1.0.3\Inventory_Management_v1.0.3\obj\Debug\Inventory_Management_v1._0._3.Forms.WelcomeForm.resources
 C:\Users\Kyle\source\repos\Inventory_Management_v1.0.3\Inventory_Management_v1.0.3\obj\Debug\Inventory_Management_v1._0._3.Forms.LoadingScreenForm.resources
+C:\Users\Kyle\source\repos\Inventory_Management_v1.0.3\Inventory_Management_v1.0.3\bin\Debug\Microsoft.SqlServer.TransactSql.ScriptDom.dll
